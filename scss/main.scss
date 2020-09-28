@@ -1,4 +1,17 @@
 @import "variables";
+// importing from _variables.scss the following 
+// $ff-alexa: 'Roboto', sans-serif;
+// $font-c-d: #232323;
+// $font-c-l: #fff;
+// $font-c-m: rgb(67, 66, 66);
+// $font-c-g: rgb(0, 167, 36);
+// $first-color: rgba(52, 129, 58, 1);
+// $second-color: rgba(238, 206, 165, 0.6);
+// $bgc-light-gray: #cdcdcd;
+// $bgc-dark-gray: #232323;
+// $bgc-l-white: #eee;
+// $bgc-fc-t: rgba(52, 129, 58, 0.6);
+// $where-is-nemo: #595958;
 
 * {
   box-sizing: border-box;
@@ -12,17 +25,22 @@ html {
 }
 
 body {
+
+  // ---- PRODUCTS PAGE ----
+  // Entire page display:flex
   h2 {
     text-align: center;
     color: $first-color;
     margin-bottom: 2rem;
   }
 
+  //Steps 1 and 2 container (display: flex) to apear next to each other (justify-content: center) to center them 
   section.steps_container {
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
 
+    // used (border-radius) to give the box a corved corners
     .step {
       border: 1px solid $first-color;
       border-radius: 5px;
@@ -43,6 +61,9 @@ body {
     }
   }
 
+  // Graphic container
+  // One Div for each element in the graphic
+  // Made of 2 img and 3 rounded Divs
   div.graphic {
     margin: 2rem 0 3rem;
 
@@ -81,6 +102,9 @@ body {
     }
   }
 
+  // Products container
+  // 3 Products- 3 Columns
+  // Each column-container made of 2 Divs (title and description) 
   section.offering {
     background-color: $bgc-l-white;
     padding-top: 2rem;
@@ -91,6 +115,7 @@ body {
       margin-bottom: 1rem;
     }
 
+    // offering_container have (justify-content: space-evenly) to creat an even soace between divs
     .offering_container {
       display: flex;
       justify-content: space-evenly;
@@ -100,6 +125,7 @@ body {
         margin-bottom: 30vh;
         width: 25vw;
 
+        // flex-direction: column to change the flex direction
         .product_title {
           display: flex;
           flex-direction: column;
@@ -140,6 +166,11 @@ body {
     }
   }
 
+  // ---- GLOSARRY & LINKS PAGE ----
+
+  // GLOSARRY SECTION
+  // One Container, 2 Columns displayed flex 
+  // One div for each item on the list
   section.glossary {
     width: 76vw;
     margin: 0 auto;
@@ -167,6 +198,9 @@ body {
     }
   }
 
+  // LINKS SECTION
+  // One Container, 2 Columns displayed flex 
+  // One Div with a "p" and "a" for each item in the list
   section.links {
     width: 76vw;
     margin: 0 auto;
@@ -209,6 +243,11 @@ body {
     }
   }
 
+  // HEADER and NAV
+
+  // I created section with 100% visual height (vh), to cover visual start section with background-image. Background is set on cover, to cover all background with picture.
+  // I created a nav-bar inside header section and I gave position fixed, so menu will be moving with browser, and be always visable.
+  // I used blur value, to make background blurred, so menu is better visable (thing that I did learn by doing this project).
   header.header {
     height: 100vh;
     background-image: url("https://www.bond-central.com/sites/default/files/bg.jpg");
@@ -223,6 +262,7 @@ body {
       background-color: $second-color;
       backdrop-filter: blur(6px);
 
+      // I created a Hamburger Menu (position: fixed) to keep it showing on scrolling (z-index) to specify layers and what layer go on top of other layers 
       #menuToggle {
         display: block;
         position: fixed;
@@ -243,6 +283,7 @@ body {
         }
       }
 
+      // input (position: absolute) to keep it place no matter what change in the style and (opacity)to hide or show on click
       #menuToggle input {
         display: block;
         width: 40px;
@@ -255,6 +296,7 @@ body {
         z-index: 2;
       }
 
+      // span position relative to the parent element and transform to rotate the span elemnt  and transition to have animetion effect using more specific speed (ease) and shape (cubic-bezier) that represent finall speed and state (0.77, 0.2, 0.05, 1)
       #menuToggle span {
         display: block;
         width: 33px;
@@ -288,7 +330,9 @@ body {
         background: $bgc-dark-gray;
       }
 
-      #menuToggle input:checked~span:nth-last-child(3) {
+      #menuToggle // onclick to start the transformation of the span elements and show the drop down menu after clicking on hamburger menu 
+
+      input:checked~span:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
       }
@@ -321,8 +365,11 @@ body {
         transform: none;
       }
 
+      // I styled the logo - image is inside a href, so its full clickable and its acting like a button. It takes us to start site.
+      // I gave 20% of browser to logo section and 80% to buttons section. It has 100%. 
+      //I decided to use float: left - it's the easiest and practical solution to put section with logo to left side of my nav-bar section.
       main {
-        background-color: #eee;
+        background-color: $font-c-l;
         padding-top: 2rem;
       }
 
@@ -342,6 +389,9 @@ body {
         }
       }
 
+      // I decided to use float: left - it's the easiest and practical solution to put section with buttons to section with logo.
+      // I removed original style of list, to remove dots.
+      // I styled <a> that it will have form of button.
       .buttons {
         width: 80%;
         display: inline-block;
@@ -374,10 +424,39 @@ body {
       }
     }
 
+    // I cleared float by using clear:both. Original it was div with class .clearfix { content:""; display: block; clear: both; } (it creates empty block section) but it caused problems in mobile version. We decided to get rid of float in easiest way as possible then.
+    // I gave position: absolute to glue element to parent header. I made transparent in rgba, so it will look nicer.
+    // I pushed section to the bottom of header to make page visual better.
+    // I styled text to put it on the middle of section. I also used uppercase in span, to capitalize chosen letters.
     .cementary {
       clear: both;
       width: 100%;
-      background-color: rgba(52, 129, 58, 0.6);
+      background-color: $bgc-fc-t;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 3% 20% 5% 20%;
+
+      p {
+        font-family: $ff-alexa;
+        color: $font-c-l;
+
+        span {
+          text-transform: uppercase;
+        }
+
+        &:first-child {
+          font-size: 3rem;
+          border-bottom: 2px solid $font-c-l;
+        }
+      }
+    }
+
+    .cementary_2 {
+      clear: both;
+      width: 100%;
+      background-color: $bgc-fc-t;
       position: absolute;
       bottom: 0;
       text-align: center;
@@ -400,10 +479,17 @@ body {
     }
   }
 
+  // In section graveyard I did use animation from outside source https://codepen.io/vasylenkoval/pen/PxoVXr . 
+  // Animated section is created only for laptop. On other devices its static. Section has a similar parameters to graveyard class.
+  // Every quote was closed in span with different class.
+  // We have 2 different quotes, so there is an animation for both of them specified in @keyframes.
+  // Text was styled. Animation is set on 20s, its full animation has 25 steps, and then its ended. After that animation starting again - infinite.
+  // After first animation comes reset. Text is erased, it takes 1 second.
+  // Keyframe for both texts was specified. 
   .graveyard {
     clear: both;
     width: 100%;
-    background-color: rgba(52, 129, 58, 0.6);
+    background-color: $bgc-fc-t;
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -411,8 +497,8 @@ body {
     padding: 5% 2% 5% 2%;
 
     p {
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
+      font-family: $ff-alexa;
+      color: $font-c-l;
       font-size: 3rem;
 
       .text_1 {
@@ -487,6 +573,14 @@ body {
     }
   }
 
+  // CONTACT FORM
+
+  // Every line of contact I closed in single div, to have better control on every area.
+  // To every div margin top and bottom was added to make a gap between them;
+  // I transformed label into block.
+  // I styled textarea individual.
+  // I styled button from raw <a> 
+  // I used float to push block elements to left. I cleared it with button.
   .contact-form {
     .contact {
       margin: 10% 15% 5%;
@@ -531,19 +625,24 @@ body {
           box-sizing: border-box;
           padding: 1% 3%;
           border: none;
-          border-right: 1px solid black;
-          border-bottom: 1px solid black;
+          border-right: 1px solid $font-c-d;
+          border-bottom: 1px solid $font-c-d;
           text-decoration: none;
           text-transform: uppercase;
           background-color: $first-color;
           color: $font-c-l;
           font-family: $ff-alexa;
           margin-right: 10%;
+          clear: both;
         }
       }
     }
   }
 
+  // FOOTER
+
+  // I transformed text into a block element to have better control on it.
+  // I did use span to capitalize chosen letters.
   .footer {
     display: block;
     background-color: $where-is-nemo;
@@ -610,6 +709,8 @@ body {
   }
 
   div.offer {
+
+    // have to main divs (div.offer-header ,div.offers-footer ) which is displayed as box , header have a flex column to center items ,footer and its elements have flex to to display the items on row 
     div.offer-header {
       margin-bottom: 1rem;
       display: flex;
@@ -685,6 +786,17 @@ body {
       color: $font-c-g;
     }
 
+    .qacontent {
+      .flexcontent {
+        img {
+          width: 1.5rem;
+          height: 1rem;
+        }
+      }
+
+      margin-top: 1rem;
+    }
+
     .question {
       font-weight: bold;
       margin: 0;
@@ -694,6 +806,7 @@ body {
       cursor: pointer;
     }
 
+    // overflow to control items that to big to fit into an area
     .answer {
       margin: 0;
       transition-property: height;
@@ -703,118 +816,119 @@ body {
       margin-left: 1.6rem;
     }
 
+    // specifing every answer size 
     .answer-a {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-b {
-      height: 10vh;
+      height: 3.7rem;
       margin-left: 1.6rem;
     }
 
     .answer-c {
-      height: 20vh;
+      height: 7.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-d {
-      height: 10vh;
+      height: 3.7rem;
       margin-left: 1.6rem;
     }
 
     .answer-e {
-      height: 10vh;
+      height: 3.7rem;
       margin-left: 1.6rem;
     }
 
     .answer-f {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-g {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-h {
-      height: 4vh;
+      height: 1.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-i {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-j {
-      height: 10vh;
+      height: 3.7rem;
       margin-left: 1.6rem;
     }
 
     .answer-k {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-l {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-m {
-      height: 10vh;
+      height: 3.7rem;
       margin-left: 1.6rem;
     }
 
     .answer-n {
-      height: 10vh;
+      height: 3.7rem;
       margin-left: 1.6rem;
     }
 
     .answer-o {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-p {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-q {
-      height: 4vh;
+      height: 1.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-r {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-s {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-t {
-      height: 4vh;
+      height: 1.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-u {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-v {
-      height: 4vh;
+      height: 1.5rem;
       margin-left: 1.6rem;
     }
 
     .answer-w {
-      height: 7vh;
+      height: 2.5rem;
       margin-left: 1.6rem;
     }
 
@@ -863,6 +977,8 @@ body {
   }
 }
 
+// media query to have a responsiv with mobile and tablet and laptop to change sizes and locations of items to pass on the responsivness
+
 @media only screen and (max-width: 425px) {
   body {
     margin: 0;
@@ -881,26 +997,29 @@ body {
 
     header.header {
       .nav-bar {
-        height: 8vh;
+
+        #menu {
+          padding-top: 25px;
+        }
 
         input#input1 {
-          top: -10px;
-          left: 84vw;
+          top: -15px;
+          left: 82vw;
         }
 
         span#span1 {
-          top: -10px;
-          left: 84vw;
+          top: -15px;
+          left: 82vw;
         }
 
         span#span2 {
-          top: -10px;
-          left: 84vw;
+          top: -15px;
+          left: 82vw;
         }
 
         span#span3 {
-          top: -10px;
-          left: 84vw;
+          top: -15px;
+          left: 82vw;
         }
 
         .buttons {
@@ -1032,95 +1151,95 @@ body {
 
     div#qa {
       .answer-a {
-        height: 17vh;
+        height: 6.2rem;
       }
 
       .answer-b {
-        height: 24vh;
+        height: 8.7rem;
       }
 
       .answer-c {
-        height: 48vh;
+        height: 17.5rem;
       }
 
       .answer-d {
-        height: 24vh;
+        height: 8.7rem;
       }
 
       .answer-e {
-        height: 28vh;
+        height: 10rem;
       }
 
       .answer-f {
-        height: 14vh;
+        height: 5rem;
       }
 
       .answer-g {
-        height: 10vh;
+        height: 3.5rem;
       }
 
       .answer-h {
-        height: 10vh;
+        height: 3.5rem;
       }
 
       .answer-i {
-        height: 20vh;
+        height: 7.3rem;
       }
 
       .answer-j {
-        height: 28vh;
+        height: 3.5rem;
       }
 
       .answer-k {
-        height: 18vh;
+        height: 6.2rem;
       }
 
       .answer-l {
-        height: 14vh;
+        height: 5rem;
       }
 
       .answer-m {
-        height: 24vh;
+        height: 8.7rem;
       }
 
       .answer-n {
-        height: 24vh;
+        height: 8.7rem;
       }
 
       .answer-o {
-        height: 18vh;
+        height: 6.2rem;
       }
 
       .answer-p {
-        height: 20vh;
+        height: 7.3rem;
       }
 
       .answer-q {
-        height: 7vh;
+        height: 2.2rem;
       }
 
       .answer-r {
-        height: 18vh;
+        height: 6.2rem;
       }
 
       .answer-s {
-        height: 18vh;
+        height: 6.2rem;
       }
 
       .answer-t {
-        height: 7vh;
+        height: 2.2rem;
       }
 
       .answer-u {
-        height: 14vh;
+        height: 5rem;
       }
 
       .answer-v {
-        height: 11vh;
+        height: 3.5rem;
       }
 
       .answer-w {
-        height: 14vh;
+        height: 5rem;
       }
     }
   }
@@ -1135,10 +1254,14 @@ body {
 
       div#menutoggle {
         top: 10px;
+
+
       }
 
       .nav-bar {
-        height: 10vh;
+        #menu {
+          padding-top: 50px;
+        }
 
         .buttons {
           display: none;
@@ -1288,95 +1411,96 @@ body {
 
     div#qa {
       .answer-a {
-        height: 10vh;
+        height: 3.7rem;
       }
 
       .answer-b {
-        height: 14vh;
+        height: 4.8rem;
       }
 
       .answer-c {
-        height: 28vh;
+        height: 10rem;
       }
 
       .answer-d {
-        height: 14vh;
+        height: 4.8rem;
       }
 
       .answer-e {
-        height: 14vh;
+        height: 4.8rem;
       }
 
       .answer-f {
-        height: 8vh;
+        height: 2.5rem;
       }
 
       .answer-g {
-        height: 8vh;
+        height: 2.5rem;
       }
 
       .answer-h {
-        height: 8vh;
+        height: 2.5rem;
       }
 
       .answer-i {
-        height: 10vh;
+        height: 3.7rem;
       }
 
       .answer-j {
-        height: 14vh;
+        height: 4.8rem;
       }
 
       .answer-k {
-        height: 10vh;
+        height: 3.7rem
       }
 
       .answer-l {
-        height: 10vh;
+        height: 3.7rem
       }
 
       .answer-m {
-        height: 14vh;
+        height: 4.8rem;
       }
 
       .answer-n {
-        height: 14vh;
+        height: 4.8rem;
+        ;
       }
 
       .answer-o {
-        height: 10vh;
+        height: 3.7rem
       }
 
       .answer-p {
-        height: 10vh;
+        height: 3.7rem
       }
 
       .answer-q {
-        height: 3vh;
+        height: 1.2rem;
       }
 
       .answer-r {
-        height: 10vh;
+        height: 3.7rem
       }
 
       .answer-s {
-        height: 10vh;
+        height: 3.7rem
       }
 
       .answer-t {
-        height: 3vh;
+        height: 1.2rem;
       }
 
       .answer-u {
-        height: 6vh;
+        height: 2.5rem;
       }
 
       .answer-v {
-        height: 3vh;
+        height: 2.5rem;
       }
 
       .answer-w {
-        height: 10vh;
+        height: 3.7rem
       }
     }
   }
@@ -1406,6 +1530,10 @@ body {
       }
 
       .nav-bar {
+        #menu {
+          padding-top: 50px;
+        }
+
         .buttons {
           display: none;
         }
