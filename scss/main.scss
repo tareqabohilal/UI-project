@@ -978,8 +978,539 @@ body {
 }
 
 // media query to have a responsiv with mobile and tablet and laptop to change sizes and locations of items to pass on the responsivness
+@media only screen and (max-width: 325px) {
+  body {
+    margin: 0;
 
-@media only screen and (max-width: 425px) {
+    .graveyard {
+      display: none;
+    }
+
+    #cementary {
+      display: block;
+    }
+
+    #menutoggle {
+      top: 10px;
+    }
+
+    header.header {
+      .nav-bar {
+
+        #menu {
+          padding-top: 25px;
+        }
+
+        input#input1 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        span#span1 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        span#span2 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        span#span3 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        .buttons {
+          display: none;
+        }
+
+        .logo {
+          margin-top: 0.2vh;
+          width: 45%;
+        }
+      }
+    }
+
+    section.steps_container {
+      .step {
+        width: 45vw;
+        margin: 0 1rem;
+      }
+    }
+
+    div.graphic {
+      margin: 2rem 0;
+
+      div.graphic_container {
+        width: 100%;
+
+        &>* {
+          margin: 0;
+          width: 20%;
+          font-weight: bolder;
+          font-size: 0.6rem;
+        }
+      }
+    }
+
+    section.offering {
+      h3 {
+        margin-bottom: 0;
+      }
+
+      .offering_container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .products {
+          width: 100%;
+          margin: 0.5rem auto;
+
+          .product_title {
+            height: 20vw;
+          }
+
+          .product_descrip {
+            p {
+              text-align: justify;
+              letter-spacing: 0.1rem;
+            }
+          }
+        }
+      }
+    }
+
+    section.glossary {
+      width: 90%;
+
+      .glossary_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        .glossary_list {
+          width: 100%;
+
+          .gloss_item {
+            letter-spacing: 0.05rem;
+          }
+        }
+      }
+    }
+
+    section.links {
+      width: 90%;
+
+      .links_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        .links_list {
+          width: 100%;
+
+          h3 {
+            margin-top: 2rem;
+          }
+
+          .links_item {
+            a {
+              padding: 0;
+              font-size: smaller;
+            }
+          }
+        }
+      }
+    }
+
+    div.offer {
+      div.offers-footer {
+        display: block;
+
+        div.offerleft {
+          display: block;
+        }
+
+        div.offerright {
+          display: block;
+        }
+
+        div.offers-blocks {
+          margin-bottom: 0.5rem;
+          width: auto;
+        }
+
+        div.offers-blocks {
+          width: 90vw;
+        }
+      }
+    }
+
+    div#qa {
+      .answer-a {
+        height: 9rem;
+      }
+
+      .answer-b {
+        height: 11rem;
+      }
+
+      .answer-c {
+        height: 25rem;
+      }
+
+      .answer-d {
+        height: 8.7rem;
+      }
+
+      .answer-e {
+        height: 13.5rem;
+      }
+
+      .answer-f {
+        height: 7.5rem;
+      }
+
+      .answer-g {
+        height: 5rem;
+      }
+
+      .answer-h {
+        height: 5rem;
+      }
+
+      .answer-i {
+        height: 10rem;
+      }
+
+      .answer-j {
+        height: 13.8rem;
+      }
+
+      .answer-k {
+        height: 8.5rem;
+      }
+
+      .answer-l {
+        height: 7rem;
+      }
+
+      .answer-m {
+        height: 11rem;
+      }
+
+      .answer-n {
+        height: 11.3rem;
+      }
+
+      .answer-o {
+        height: 9rem;
+      }
+
+      .answer-p {
+        height: 10rem;
+      }
+
+      .answer-q {
+        height: 2.5rem;
+      }
+
+      .answer-r {
+        height: 7.5rem;
+      }
+
+      .answer-s {
+        height: 8.5rem;
+      }
+
+      .answer-t {
+        height: 3.8rem;
+      }
+
+      .answer-u {
+        height: 6.3rem;
+      }
+
+      .answer-v {
+        height: 4.8rem;
+      }
+
+      .answer-w {
+        height: 6rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 326px) and (max-width: 375px) {
+  body {
+    margin: 0;
+
+    .graveyard {
+      display: none;
+    }
+
+    #cementary {
+      display: block;
+    }
+
+    #menutoggle {
+      top: 10px;
+    }
+
+    header.header {
+      .nav-bar {
+
+        #menu {
+          padding-top: 25px;
+        }
+
+        input#input1 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        span#span1 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        span#span2 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        span#span3 {
+          top: -15px;
+          left: 80vw;
+        }
+
+        .buttons {
+          display: none;
+        }
+
+        .logo {
+          margin-top: 0.2vh;
+          width: 45%;
+        }
+      }
+    }
+
+    section.steps_container {
+      .step {
+        width: 45vw;
+        margin: 0 1rem;
+      }
+    }
+
+    div.graphic {
+      margin: 2rem 0;
+
+      div.graphic_container {
+        width: 100%;
+
+        &>* {
+          margin: 0;
+          width: 20%;
+          font-weight: bolder;
+          font-size: 0.6rem;
+        }
+      }
+    }
+
+    section.offering {
+      h3 {
+        margin-bottom: 0;
+      }
+
+      .offering_container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .products {
+          width: 100%;
+          margin: 0.5rem auto;
+
+          .product_title {
+            height: 20vw;
+          }
+
+          .product_descrip {
+            p {
+              text-align: justify;
+              letter-spacing: 0.1rem;
+            }
+          }
+        }
+      }
+    }
+
+    section.glossary {
+      width: 90%;
+
+      .glossary_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        .glossary_list {
+          width: 100%;
+
+          .gloss_item {
+            letter-spacing: 0.05rem;
+          }
+        }
+      }
+    }
+
+    section.links {
+      width: 90%;
+
+      .links_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        .links_list {
+          width: 100%;
+
+          h3 {
+            margin-top: 2rem;
+          }
+
+          .links_item {
+            a {
+              padding: 0;
+              font-size: smaller;
+            }
+          }
+        }
+      }
+    }
+
+    div.offer {
+      div.offers-footer {
+        display: block;
+
+        div.offerleft {
+          display: block;
+        }
+
+        div.offerright {
+          display: block;
+        }
+
+        div.offers-blocks {
+          margin-bottom: 0.5rem;
+          width: auto;
+        }
+
+        div.offers-blocks {
+          width: 90vw;
+        }
+      }
+    }
+
+    div#qa {
+      .answer-a {
+        height: 8rem;
+      }
+
+      .answer-b {
+        height: 10rem;
+      }
+
+      .answer-c {
+        height: 22rem;
+      }
+
+      .answer-d {
+        height: 10rem;
+      }
+
+      .answer-e {
+        height: 11.3rem;
+      }
+
+      .answer-f {
+        height: 6rem;
+      }
+
+      .answer-g {
+        height: 5rem;
+      }
+
+      .answer-h {
+        height: 4rem;
+      }
+
+      .answer-i {
+        height: 7.5rem;
+      }
+
+      .answer-j {
+        height: 11.5rem;
+      }
+
+      .answer-k {
+        height: 7.5rem;
+      }
+
+      .answer-l {
+        height: 6rem;
+      }
+
+      .answer-m {
+        height: 10rem;
+      }
+
+      .answer-n {
+        height: 10rem;
+      }
+
+      .answer-o {
+        height: 7.5rem;
+      }
+
+      .answer-p {
+        height: 8.8rem;
+      }
+
+      .answer-q {
+        height: 2.5rem;
+      }
+
+      .answer-r {
+        height: 6.7rem;
+      }
+
+      .answer-s {
+        height: 7.6rem;
+      }
+
+      .answer-t {
+        height: 3.8rem;
+      }
+
+      .answer-u {
+        height: 6rem;
+      }
+
+      .answer-v {
+        height: 4.8rem;
+      }
+
+      .answer-w {
+        height: 6rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
   body {
     margin: 0;
 
@@ -1155,15 +1686,15 @@ body {
       }
 
       .answer-b {
-        height: 8.7rem;
+        height: 8.9rem;
       }
 
       .answer-c {
-        height: 17.5rem;
+        height: 18.5rem;
       }
 
       .answer-d {
-        height: 8.7rem;
+        height: 8.9rem;
       }
 
       .answer-e {
@@ -1171,15 +1702,15 @@ body {
       }
 
       .answer-f {
-        height: 5rem;
+        height: 5.2rem;
       }
 
       .answer-g {
-        height: 3.5rem;
+        height: 3.8rem;
       }
 
       .answer-h {
-        height: 3.5rem;
+        height: 3.8rem;
       }
 
       .answer-i {
@@ -1187,7 +1718,7 @@ body {
       }
 
       .answer-j {
-        height: 3.5rem;
+        height: 10rem;
       }
 
       .answer-k {
@@ -1199,11 +1730,11 @@ body {
       }
 
       .answer-m {
-        height: 8.7rem;
+        height: 8.9rem;
       }
 
       .answer-n {
-        height: 8.7rem;
+        height: 8.9rem;
       }
 
       .answer-o {
@@ -1215,7 +1746,7 @@ body {
       }
 
       .answer-q {
-        height: 2.2rem;
+        height: 2.3rem;
       }
 
       .answer-r {

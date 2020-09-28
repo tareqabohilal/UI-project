@@ -641,7 +641,277 @@ body div#qa .down {
   margin-right: 0.3rem;
   margin-left: -0.3rem; }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 325px) {
+  body {
+    margin: 0; }
+    body .graveyard {
+      display: none; }
+    body #cementary {
+      display: block; }
+    body #menutoggle {
+      top: 10px; }
+    body header.header .nav-bar #menu {
+      padding-top: 25px; }
+    body header.header .nav-bar input#input1 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar span#span1 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar span#span2 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar span#span3 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar .buttons {
+      display: none; }
+    body header.header .nav-bar .logo {
+      margin-top: 0.2vh;
+      width: 45%; }
+    body section.steps_container .step {
+      width: 45vw;
+      margin: 0 1rem; }
+    body div.graphic {
+      margin: 2rem 0; }
+      body div.graphic div.graphic_container {
+        width: 100%; }
+        body div.graphic div.graphic_container > * {
+          margin: 0;
+          width: 20%;
+          font-weight: bolder;
+          font-size: 0.6rem; }
+    body section.offering h3 {
+      margin-bottom: 0; }
+    body section.offering .offering_container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0; }
+      body section.offering .offering_container .products {
+        width: 100%;
+        margin: 0.5rem auto; }
+        body section.offering .offering_container .products .product_title {
+          height: 20vw; }
+        body section.offering .offering_container .products .product_descrip p {
+          text-align: justify;
+          letter-spacing: 0.1rem; }
+    body section.glossary {
+      width: 90%; }
+      body section.glossary .glossary_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem; }
+        body section.glossary .glossary_container .glossary_list {
+          width: 100%; }
+          body section.glossary .glossary_container .glossary_list .gloss_item {
+            letter-spacing: 0.05rem; }
+    body section.links {
+      width: 90%; }
+      body section.links .links_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem; }
+        body section.links .links_container .links_list {
+          width: 100%; }
+          body section.links .links_container .links_list h3 {
+            margin-top: 2rem; }
+          body section.links .links_container .links_list .links_item a {
+            padding: 0;
+            font-size: smaller; }
+    body div.offer div.offers-footer {
+      display: block; }
+      body div.offer div.offers-footer div.offerleft {
+        display: block; }
+      body div.offer div.offers-footer div.offerright {
+        display: block; }
+      body div.offer div.offers-footer div.offers-blocks {
+        margin-bottom: 0.5rem;
+        width: auto; }
+      body div.offer div.offers-footer div.offers-blocks {
+        width: 90vw; }
+    body div#qa .answer-a {
+      height: 9rem; }
+    body div#qa .answer-b {
+      height: 11rem; }
+    body div#qa .answer-c {
+      height: 25rem; }
+    body div#qa .answer-d {
+      height: 8.7rem; }
+    body div#qa .answer-e {
+      height: 13.5rem; }
+    body div#qa .answer-f {
+      height: 7.5rem; }
+    body div#qa .answer-g {
+      height: 5rem; }
+    body div#qa .answer-h {
+      height: 5rem; }
+    body div#qa .answer-i {
+      height: 10rem; }
+    body div#qa .answer-j {
+      height: 13.8rem; }
+    body div#qa .answer-k {
+      height: 8.5rem; }
+    body div#qa .answer-l {
+      height: 7rem; }
+    body div#qa .answer-m {
+      height: 11rem; }
+    body div#qa .answer-n {
+      height: 11.3rem; }
+    body div#qa .answer-o {
+      height: 9rem; }
+    body div#qa .answer-p {
+      height: 10rem; }
+    body div#qa .answer-q {
+      height: 2.5rem; }
+    body div#qa .answer-r {
+      height: 7.5rem; }
+    body div#qa .answer-s {
+      height: 8.5rem; }
+    body div#qa .answer-t {
+      height: 3.8rem; }
+    body div#qa .answer-u {
+      height: 6.3rem; }
+    body div#qa .answer-v {
+      height: 4.8rem; }
+    body div#qa .answer-w {
+      height: 6rem; } }
+
+@media only screen and (min-width: 326px) and (max-width: 375px) {
+  body {
+    margin: 0; }
+    body .graveyard {
+      display: none; }
+    body #cementary {
+      display: block; }
+    body #menutoggle {
+      top: 10px; }
+    body header.header .nav-bar #menu {
+      padding-top: 25px; }
+    body header.header .nav-bar input#input1 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar span#span1 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar span#span2 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar span#span3 {
+      top: -15px;
+      left: 80vw; }
+    body header.header .nav-bar .buttons {
+      display: none; }
+    body header.header .nav-bar .logo {
+      margin-top: 0.2vh;
+      width: 45%; }
+    body section.steps_container .step {
+      width: 45vw;
+      margin: 0 1rem; }
+    body div.graphic {
+      margin: 2rem 0; }
+      body div.graphic div.graphic_container {
+        width: 100%; }
+        body div.graphic div.graphic_container > * {
+          margin: 0;
+          width: 20%;
+          font-weight: bolder;
+          font-size: 0.6rem; }
+    body section.offering h3 {
+      margin-bottom: 0; }
+    body section.offering .offering_container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0; }
+      body section.offering .offering_container .products {
+        width: 100%;
+        margin: 0.5rem auto; }
+        body section.offering .offering_container .products .product_title {
+          height: 20vw; }
+        body section.offering .offering_container .products .product_descrip p {
+          text-align: justify;
+          letter-spacing: 0.1rem; }
+    body section.glossary {
+      width: 90%; }
+      body section.glossary .glossary_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem; }
+        body section.glossary .glossary_container .glossary_list {
+          width: 100%; }
+          body section.glossary .glossary_container .glossary_list .gloss_item {
+            letter-spacing: 0.05rem; }
+    body section.links {
+      width: 90%; }
+      body section.links .links_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 1rem; }
+        body section.links .links_container .links_list {
+          width: 100%; }
+          body section.links .links_container .links_list h3 {
+            margin-top: 2rem; }
+          body section.links .links_container .links_list .links_item a {
+            padding: 0;
+            font-size: smaller; }
+    body div.offer div.offers-footer {
+      display: block; }
+      body div.offer div.offers-footer div.offerleft {
+        display: block; }
+      body div.offer div.offers-footer div.offerright {
+        display: block; }
+      body div.offer div.offers-footer div.offers-blocks {
+        margin-bottom: 0.5rem;
+        width: auto; }
+      body div.offer div.offers-footer div.offers-blocks {
+        width: 90vw; }
+    body div#qa .answer-a {
+      height: 8rem; }
+    body div#qa .answer-b {
+      height: 10rem; }
+    body div#qa .answer-c {
+      height: 22rem; }
+    body div#qa .answer-d {
+      height: 10rem; }
+    body div#qa .answer-e {
+      height: 11.3rem; }
+    body div#qa .answer-f {
+      height: 6rem; }
+    body div#qa .answer-g {
+      height: 5rem; }
+    body div#qa .answer-h {
+      height: 4rem; }
+    body div#qa .answer-i {
+      height: 7.5rem; }
+    body div#qa .answer-j {
+      height: 11.5rem; }
+    body div#qa .answer-k {
+      height: 7.5rem; }
+    body div#qa .answer-l {
+      height: 6rem; }
+    body div#qa .answer-m {
+      height: 10rem; }
+    body div#qa .answer-n {
+      height: 10rem; }
+    body div#qa .answer-o {
+      height: 7.5rem; }
+    body div#qa .answer-p {
+      height: 8.8rem; }
+    body div#qa .answer-q {
+      height: 2.5rem; }
+    body div#qa .answer-r {
+      height: 6.7rem; }
+    body div#qa .answer-s {
+      height: 7.6rem; }
+    body div#qa .answer-t {
+      height: 3.8rem; }
+    body div#qa .answer-u {
+      height: 6rem; }
+    body div#qa .answer-v {
+      height: 4.8rem; }
+    body div#qa .answer-w {
+      height: 6rem; } }
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
   body {
     margin: 0; }
     body .graveyard {
@@ -732,37 +1002,37 @@ body div#qa .down {
     body div#qa .answer-a {
       height: 6.2rem; }
     body div#qa .answer-b {
-      height: 8.7rem; }
+      height: 8.9rem; }
     body div#qa .answer-c {
-      height: 17.5rem; }
+      height: 18.5rem; }
     body div#qa .answer-d {
-      height: 8.7rem; }
+      height: 8.9rem; }
     body div#qa .answer-e {
       height: 10rem; }
     body div#qa .answer-f {
-      height: 5rem; }
+      height: 5.2rem; }
     body div#qa .answer-g {
-      height: 3.5rem; }
+      height: 3.8rem; }
     body div#qa .answer-h {
-      height: 3.5rem; }
+      height: 3.8rem; }
     body div#qa .answer-i {
       height: 7.3rem; }
     body div#qa .answer-j {
-      height: 3.5rem; }
+      height: 10rem; }
     body div#qa .answer-k {
       height: 6.2rem; }
     body div#qa .answer-l {
       height: 5rem; }
     body div#qa .answer-m {
-      height: 8.7rem; }
+      height: 8.9rem; }
     body div#qa .answer-n {
-      height: 8.7rem; }
+      height: 8.9rem; }
     body div#qa .answer-o {
       height: 6.2rem; }
     body div#qa .answer-p {
       height: 7.3rem; }
     body div#qa .answer-q {
-      height: 2.2rem; }
+      height: 2.3rem; }
     body div#qa .answer-r {
       height: 6.2rem; }
     body div#qa .answer-s {
